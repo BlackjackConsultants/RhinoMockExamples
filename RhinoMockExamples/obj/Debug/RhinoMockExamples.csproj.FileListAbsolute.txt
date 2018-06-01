@@ -1,0 +1,15 @@
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\obj\Debug\RhinoMockExamples.csproj.CoreCompileInputs.cache
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\RhinoMockExamples.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\RhinoMockExamples.pdb
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Rhino.Mocks.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Rhino.Mocks.xml
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\obj\Debug\RhinoMockExamples.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\obj\Debug\RhinoMockExamples.pdb
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\obj\Debug\RhinoMockExamples.csprojResolveAssemblyReference.cache

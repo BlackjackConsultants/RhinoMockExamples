@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoMockExamples", "RhinoMockExamples\RhinoMockExamples.csproj", "{DB9B58C8-A499-46CE-93B0-B99D692BEAEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB9B58C8-A499-46CE-93B0-B99D692BEAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB9B58C8-A499-46CE-93B0-B99D692BEAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB9B58C8-A499-46CE-93B0-B99D692BEAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB9B58C8-A499-46CE-93B0-B99D692BEAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97271125-0661-4709-999E-C93D45BC9C03}
+	EndGlobalSection
+EndGlobal
