@@ -68,7 +68,9 @@ namespace RhinoMockExamples {
             Assert.IsTrue(tip3 == "Tito Fuentes");
         }
 
-
+        /// <summary>
+        /// this method creates a stub method for the session.Query<Meal>
+        /// </summary>
         [TestMethod]
         public void WhenUsingMockingLinqDependenciesWithNHibernateSessionReturnDesiredResults() {
             /* 
@@ -76,7 +78,7 @@ namespace RhinoMockExamples {
              */
 
             var meals = new List<Meal>() {
-                         new Meal() { ServerName = "pancho", Cost = 333, Tip = .15, Id = 1, Date = DateTime.Now },
+                         new Meal() { ServerName = "pancho", Cost = 333, Tip = .15, Id = 1, Date = new DateTime(2018, 6, 1)},
                          new Meal() { ServerName = "papo", Cost = 222, Tip = .15, Id = 2, Date = new DateTime(2018, 5, 14)}
                      };
 
@@ -88,11 +90,6 @@ namespace RhinoMockExamples {
             mealService.Session = session;
             var todayMeals = mealService.GetMealsByDate(meals, new DateTime(2018, 6, 1));
             Assert.IsTrue(todayMeals.Count == 1);
-
-            //MockRepository.GenerateMock<IRepository>();
-            //mealsQuery.Stub(mealsQuery.Expression).Return("Michael Jordan");
-            //_repository.Stub(x => x.Query<ActionType>()).Return(_actionQuery);
-
         }
 
     }
