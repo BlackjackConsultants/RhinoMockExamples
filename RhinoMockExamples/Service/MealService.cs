@@ -23,8 +23,14 @@ namespace RhinoMockExamples.Service {
             return TipCalculationService.Meal.ServerName;
         }
 
-        public IList<Meal> GetMealsByDate(IList<Meal> allMeals, DateTime date) {
+        public IList<Meal> GetMealsByDate(DateTime date) {
             var meals = Session.Query<Meal>().Where(x => x.Date == date).ToList();
+            return meals;
+        }
+
+
+        public IList<Meal> GetMealsByGender(IList<Meal> allMeals, int gender) {
+            var meals = allMeals.Where(x => x.ServerGender == gender).ToList();
             return meals;
         }
 

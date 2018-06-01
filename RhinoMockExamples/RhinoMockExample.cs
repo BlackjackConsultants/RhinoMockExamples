@@ -88,9 +88,32 @@ namespace RhinoMockExamples {
 
             var mealService = new MealService();
             mealService.Session = session;
-            var todayMeals = mealService.GetMealsByDate(meals, new DateTime(2018, 6, 1));
+            var todayMeals = mealService.GetMealsByDate(new DateTime(2018, 6, 1));
             Assert.IsTrue(todayMeals.Count == 1);
         }
 
+        /// <summary>
+        /// this method creates a stub method for the session.Query<Meal>
+        /// </summary>
+        [TestMethod]
+        public void WhenUsingMockingLinqDependenciesReturnDesiredResults() {
+            /* 
+             * note: when doing linq, simple create the fake list and let linq do its thing.
+             */
+
+            var meals = new List<Meal>() {
+                         new Meal() { ServerGender = 1, ServerName = "ana", Cost = 333, Tip = .15, Id = 1, Date = new DateTime(2018, 6, 1)},
+                         new Meal() { ServerGender = 2, ServerName = "papo", Cost = 222, Tip = .15, Id = 2, Date = new DateTime(2018, 5, 14)}
+                     };
+
+            var session = MockRepository.GenerateStub<ISession>();
+            IQueryable<Meal> query = MockRepository.GenerateStub<IQueryable<Meal>>();
+            session.Stub(s => s.Query<Meal>()).Return(meals.AsQueryable());
+
+            var mealService = new MealService();
+            mealService.Session = session;
+            var todayMeals = mealService.GetMealsByGender(meals, 1);
+            Assert.IsTrue(todayMeals.Count == 1);
+        }
     }
 }

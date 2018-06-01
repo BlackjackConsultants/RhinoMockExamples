@@ -12,5 +12,6 @@ namespace RhinoMockExamples.Model {
         public int Id { get; set; }
         public string ServerName { get; internal set; }
         public DateTime Date { get; internal set; }
+        public int ServerGender { get; internal set; }
     }
 }
