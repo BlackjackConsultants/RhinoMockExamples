@@ -12,4 +12,13 @@ C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExam
 C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Rhino.Mocks.xml
 C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\obj\Debug\RhinoMockExamples.dll
 C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\obj\Debug\RhinoMockExamples.pdb
-C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\obj\Debug\RhinoMockExamples.csprojResolveAssemblyReference.cache
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Antlr3.Runtime.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Iesi.Collections.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\NHibernate.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Remotion.Linq.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Remotion.Linq.EagerFetching.dll
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Antlr3.Runtime.xml
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Iesi.Collections.xml
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\NHibernate.xml
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Remotion.Linq.xml
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Remotion.Linq.EagerFetching.xml

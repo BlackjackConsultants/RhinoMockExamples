@@ -1,4 +1,5 @@
-﻿using RhinoMockExamples.Model;
+﻿using NHibernate;
+using RhinoMockExamples.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace RhinoMockExamples.Service {
     public class MealService : IMealService {
+        public ISession Session { get; set; }
+
         public double GetTip(Meal meal) {
             return TipCalculationService.CalculateTip(meal.Cost, .15);
         }
@@ -21,7 +24,8 @@ namespace RhinoMockExamples.Service {
         }
 
         public IList<Meal> GetMealsByDate(IList<Meal> allMeals, DateTime date) {
-            return allMeals.Where(x => x.Date == date).ToList();
+            var meals = Session.Query<Meal>().Where(x => x.Date == date).ToList();
+            return meals;
         }
 
         public ITipCalculationService TipCalculationService { get; set; }
