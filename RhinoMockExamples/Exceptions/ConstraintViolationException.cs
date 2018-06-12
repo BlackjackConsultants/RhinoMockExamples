@@ -6,7 +6,7 @@ using System.Text;
 namespace RhinoMockExamples.Exceptions.BusinessRules {
 
     [Serializable]
-    public class ConstraintViolationException /* : BusinessRuleException */ {
+    public class ConstraintViolationException : BusinessRuleException {
 
         private readonly ConstraintReturn[] constraintReturns;
 
@@ -26,6 +26,15 @@ namespace RhinoMockExamples.Exceptions.BusinessRules {
 
         public ConstraintViolationException(ConstraintReturn[] constraintReturns) {
             this.constraintReturns = constraintReturns;
+        }
+
+        public ConstraintViolationException(string message) : base(message) {
+        }
+
+        public ConstraintViolationException(string message, Exception exception) : base(message, exception) {
+        }
+
+        protected ConstraintViolationException(SerializationInfo serializationInfo, StreamingContext streamingContext) : base(serializationInfo, streamingContext) {
         }
 
         public ConstraintReturn[] ConstraintReturns {
