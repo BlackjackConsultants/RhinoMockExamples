@@ -69,7 +69,15 @@
     <Reference Include="System.Transactions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessRuleErrorFeedback.cs" />
+    <Compile Include="EntityFeedbackInfo.cs" />
+    <Compile Include="EntitySerializationInfo.cs" />
+    <Compile Include="Exceptions\ConstraintReturn.cs" />
+    <Compile Include="Exceptions\ConstraintViolationException.cs" />
+    <Compile Include="Exceptions\Rule.cs" />
+    <Compile Include="IDataImportJobSchemaService.cs" />
     <Compile Include="Model\Meal.cs" />
+    <Compile Include="MockingISerializable.cs" />
     <Compile Include="RhinoMockExample.cs" />
     <Compile Include="Service\IMealService.cs" />
     <Compile Include="Service\ITipCalculationService.cs" />
@@ -80,7 +88,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="FakeObjects\" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
