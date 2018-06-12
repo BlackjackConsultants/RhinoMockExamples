@@ -72,6 +72,7 @@
     <Compile Include="BusinessRuleErrorFeedback.cs" />
     <Compile Include="EntityFeedbackInfo.cs" />
     <Compile Include="EntitySerializationInfo.cs" />
+    <Compile Include="Exceptions\BusinessRuleException.cs" />
     <Compile Include="Exceptions\ConstraintReturn.cs" />
     <Compile Include="Exceptions\ConstraintViolationException.cs" />
     <Compile Include="Exceptions\Rule.cs" />

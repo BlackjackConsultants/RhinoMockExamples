@@ -6,7 +6,7 @@ using System.Text;
 namespace RhinoMockExamples.Exceptions.BusinessRules {
 
     [Serializable]
-    public class ConstraintViolationException {
+    public class ConstraintViolationException /* : BusinessRuleException */ {
 
         private readonly ConstraintReturn[] constraintReturns;
 

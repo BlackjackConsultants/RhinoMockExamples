@@ -8,6 +8,7 @@ using RhinoMockExamples.Service;
 using NHibernate;
 using RhinoMockExamples.Exceptions.BusinessRules;
 using System.Transactions;
+using RhinoMockExamples.Exceptions;
 
 namespace RhinoMockExamples {
 
@@ -40,6 +41,16 @@ namespace RhinoMockExamples {
         public void WhenUsingExactParamValuesReturnOnlyWhenThoseValuesArePassed() {
             var entityFeedbackInfo = MockRepository.GenerateMock<EntityFeedbackInfo>();
             var businessRule = MockRepository.GenerateMock<ConstraintViolationException>();
+            var entitySerializationInfo = MockRepository.GenerateMock<EntitySerializationInfo>();
+            var dataImportJobSchemaService = MockRepository.GenerateMock<IDataImportJobSchemaService>();
+            var errorFeedback = new BusinessRuleErrorFeedback<Transaction>(entityFeedbackInfo, businessRule, DataImportFeedbackOperation.Insert, entitySerializationInfo, dataImportJobSchemaService);
+            Assert.IsNotNull(errorFeedback);
+        }
+
+        [TestMethod]
+        public void WhenUsingExactParamValuesReturnOnlyWhenThoseValuesArePassed2() {
+            var entityFeedbackInfo = MockRepository.GenerateMock<EntityFeedbackInfo>();
+            var businessRule = MockRepository.GenerateMock<BusinessRuleException>();
             var entitySerializationInfo = MockRepository.GenerateMock<EntitySerializationInfo>();
             var dataImportJobSchemaService = MockRepository.GenerateMock<IDataImportJobSchemaService>();
             var errorFeedback = new BusinessRuleErrorFeedback<Transaction>(entityFeedbackInfo, businessRule, DataImportFeedbackOperation.Insert, entitySerializationInfo, dataImportJobSchemaService);
