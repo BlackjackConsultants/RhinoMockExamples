@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessRuleErrorFeedback.cs" />
+    <Compile Include="DataImportJobSchemaService.cs" />
     <Compile Include="EntityFeedbackInfo.cs" />
     <Compile Include="EntitySerializationInfo.cs" />
     <Compile Include="Exceptions\BusinessRuleException.cs" />

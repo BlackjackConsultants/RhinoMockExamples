@@ -38,7 +38,7 @@ namespace RhinoMockExamples.Exceptions.BusinessRules {
         }
 
         public ConstraintReturn[] ConstraintReturns {
-            get { return constraintReturns; }
+            get; set;
         }
 
         public string Details {

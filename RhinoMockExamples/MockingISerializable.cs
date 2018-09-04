@@ -38,23 +38,16 @@ namespace RhinoMockExamples {
         public DataImportFeedbackOperation DataImportFeedbackOperation { get; private set; }
 
         [TestMethod]
-        public void WhenUsingExactParamValuesReturnOnlyWhenThoseValuesArePassed() {
-            var entityFeedbackInfo = MockRepository.GenerateMock<EntityFeedbackInfo>();
-            var businessRule = MockRepository.GenerateMock<ConstraintViolationException>();
-            var entitySerializationInfo = MockRepository.GenerateMock<EntitySerializationInfo>();
+        public void AssertWasCalledWithoutParamsExample() {
+            var constraint = MockRepository.GenerateMock<ConstraintViolationException>();
             var dataImportJobSchemaService = MockRepository.GenerateMock<IDataImportJobSchemaService>();
-            var errorFeedback = new BusinessRuleErrorFeedback<Transaction>(entityFeedbackInfo, businessRule, DataImportFeedbackOperation.Insert, entitySerializationInfo, dataImportJobSchemaService);
+            var errorFeedback = new BusinessRuleErrorFeedback<Transaction>(constraint, dataImportJobSchemaService);
             Assert.IsNotNull(errorFeedback);
-        }
-
-        [TestMethod]
-        public void WhenUsingExactParamValuesReturnOnlyWhenThoseValuesArePassed2() {
-            var entityFeedbackInfo = MockRepository.GenerateMock<EntityFeedbackInfo>();
-            var businessRule = MockRepository.GenerateMock<BusinessRuleException>();
-            var entitySerializationInfo = MockRepository.GenerateMock<EntitySerializationInfo>();
-            var dataImportJobSchemaService = MockRepository.GenerateMock<IDataImportJobSchemaService>();
-            var errorFeedback = new BusinessRuleErrorFeedback<Transaction>(entityFeedbackInfo, businessRule, DataImportFeedbackOperation.Insert, entitySerializationInfo, dataImportJobSchemaService);
-            Assert.IsNotNull(errorFeedback);
+            dataImportJobSchemaService.AssertWasNotCalled(r => r.Test());
+            constraint.ConstraintReturns = new ConstraintReturn[1];
+            constraint.ConstraintReturns[0] = new ConstraintReturn();
+            var errorFeedback1 = new BusinessRuleErrorFeedback<Transaction>(constraint, dataImportJobSchemaService);
+            dataImportJobSchemaService.AssertWasCalled(r => r.Test());
         }
     }
 }
