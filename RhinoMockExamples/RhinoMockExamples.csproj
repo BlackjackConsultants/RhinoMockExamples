@@ -78,8 +78,8 @@
     <Compile Include="Exceptions\ConstraintViolationException.cs" />
     <Compile Include="Exceptions\Rule.cs" />
     <Compile Include="IDataImportJobSchemaService.cs" />
+    <Compile Include="MockExamples.cs" />
     <Compile Include="Model\Meal.cs" />
-    <Compile Include="MockingISerializable.cs" />
     <Compile Include="RhinoMockExample.cs" />
     <Compile Include="Service\IMealService.cs" />
     <Compile Include="Service\ITipCalculationService.cs" />
