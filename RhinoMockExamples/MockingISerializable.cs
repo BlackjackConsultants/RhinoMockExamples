@@ -49,5 +49,19 @@ namespace RhinoMockExamples {
             var errorFeedback1 = new BusinessRuleErrorFeedback<Transaction>(constraint, dataImportJobSchemaService);
             dataImportJobSchemaService.AssertWasCalled(r => r.Test());
         }
+
+        [TestMethod]
+        public void AssertWasCalledWithParamsExample() {
+            var constraint = MockRepository.GenerateMock<ConstraintViolationException>();
+            var dataImportJobSchemaService = MockRepository.GenerateMock<IDataImportJobSchemaService>();
+            var errorFeedback = new BusinessRuleErrorFeedback<Transaction>(constraint, dataImportJobSchemaService);
+            Assert.IsNotNull(errorFeedback);
+            Meal meal = new Meal() { Id = 1, ServerName = "Pepe" };
+            dataImportJobSchemaService.AssertWasNotCalled(r => r.Test2(Arg<Meal>.Matches(p => p.Id == 1 && p.ServerName == "Pepe")));
+            constraint.ConstraintReturns = new ConstraintReturn[1];
+            constraint.ConstraintReturns[0] = new ConstraintReturn();
+            var errorFeedback1 = new BusinessRuleErrorFeedback<Transaction>(constraint, dataImportJobSchemaService);
+            dataImportJobSchemaService.AssertWasCalled(r => r.Test2(Arg<Meal>.Matches(p => p.Id == 1 && p.ServerName == "Pepe")));
+        }
     }
 }
