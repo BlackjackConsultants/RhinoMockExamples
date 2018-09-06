@@ -14,6 +14,7 @@ namespace RhinoMockExamples {
                 dataImportJobSchemaService.Test();
                 Meal meal = new Meal() { Id = 1, ServerName = "Pepe" };
                 dataImportJobSchemaService.Test2(meal);
+                var test = dataImportJobSchemaService.AProperty;
             }
         }
     }

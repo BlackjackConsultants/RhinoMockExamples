@@ -14,6 +14,12 @@ namespace RhinoMockExamples {
         public int Test2(Meal meal) {
             return meal.Id;
         }
+
+        public void Test3(Meal meal) {
+            throw new NotImplementedException();
+        }
+
+        public int AProperty { get; set; }
     }
 }
 

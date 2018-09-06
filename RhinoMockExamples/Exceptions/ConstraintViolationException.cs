@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RhinoMockExamples.Model;
+using System;
 using System.Runtime.Serialization;
 using System.Security;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Text;
 namespace RhinoMockExamples.Exceptions.BusinessRules {
 
     [Serializable]
-    public class ConstraintViolationException : BusinessRuleException {
+    public class ConstraintViolationException { //: BusinessRuleException {
 
         private readonly ConstraintReturn[] constraintReturns;
 
@@ -14,27 +15,23 @@ namespace RhinoMockExamples.Exceptions.BusinessRules {
             constraintReturns = new ConstraintReturn[] { };
         }
 
-        ////public ConstraintViolationException(string message)
-        ////    : base(message) {
-        ////    constraintReturns = new ConstraintReturn[] { };
-        ////}
-
-        ////public ConstraintViolationException(string message, ConstraintReturn[] constraintReturns)
-        ////    : base(message) {
-        ////    this.constraintReturns = constraintReturns;
-        ////}
-
         public ConstraintViolationException(ConstraintReturn[] constraintReturns) {
             this.constraintReturns = constraintReturns;
         }
 
-        public ConstraintViolationException(string message) : base(message) {
+        public ConstraintViolationException(Meal[] meals) {
         }
 
-        public ConstraintViolationException(string message, Exception exception) : base(message, exception) {
+        public ConstraintViolationException(Meal meal) {
         }
 
-        protected ConstraintViolationException(SerializationInfo serializationInfo, StreamingContext streamingContext) : base(serializationInfo, streamingContext) {
+        public ConstraintViolationException(string message) /*: base(message)*/ {
+        }
+
+        public ConstraintViolationException(string message, Exception exception)/* : base(message, exception)*/ {
+        }
+
+        protected ConstraintViolationException(SerializationInfo serializationInfo, StreamingContext streamingContext) /*: base(serializationInfo, streamingContext)*/ {
         }
 
         public ConstraintReturn[] ConstraintReturns {
@@ -53,11 +50,6 @@ namespace RhinoMockExamples.Exceptions.BusinessRules {
                 return builder.ToString();
             }
         }
-
-        ////[SecurityCritical]
-        ////public override void GetObjectData(SerializationInfo info, StreamingContext context) {
-        ////    base.GetObjectData(info, context);
-        ////}
     }
 }
 
