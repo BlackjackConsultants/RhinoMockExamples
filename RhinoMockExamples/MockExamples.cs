@@ -48,6 +48,26 @@ namespace RhinoMockExamples {
             dataImportJobSchemaService.AssertWasCalled(r => r.Test2(Arg<Meal>.Matches(p => p.Id == 1 && p.ServerName == "Pepe")));
         }
 
+
+        /// <summary>
+        /// In this method we mock the dataImportJobSchemaService to return true even though inside the method it should return false.
+        /// </summary>
+        [TestMethod]
+        public void AssertWasCalledWithMultipleParamsExample() {
+            //mock example
+            var dataImportJobSchemaService = MockRepository.GenerateMock<IDataImportJobSchemaService>();
+            var errorFeedback = new BusinessRuleErrorFeedback<Transaction>();
+            dataImportJobSchemaService.Expect(r => r.Test4(Arg<Meal>.Is.Anything, Arg<Meal>.Is.Anything)).Return(true);
+            var retValue = errorFeedback.Test(dataImportJobSchemaService);
+            Assert.IsTrue(retValue);
+            // here we show what happens in real class
+            var dataImportJobSchemaService2 = new DataImportJobSchemaService();
+            var errorFeedback2 = new BusinessRuleErrorFeedback<Transaction>();
+            var retValue2 = errorFeedback.Test(dataImportJobSchemaService2);
+            Assert.IsFalse(retValue2);
+
+        }
+
         /// <summary>
         /// Verfify that the Mocked class method was called.  In this case the method has parameters
         /// </summary>

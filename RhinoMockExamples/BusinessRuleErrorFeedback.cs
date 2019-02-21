@@ -17,5 +17,14 @@ namespace RhinoMockExamples {
                 var test = dataImportJobSchemaService.AProperty;
             }
         }
+        public BusinessRuleErrorFeedback() {
+
+        }
+
+        public bool Test(IDataImportJobSchemaService dataImportJobSchemaService) {
+            Meal meal = new Meal() { Id = 1, ServerName = "Pepe", Cost = 1 };
+            Meal meal2 = new Meal() { Id = 2, ServerName = "Pepe2", Cost = 2};
+            return dataImportJobSchemaService.Test4(meal, meal2);
+        }
     }
 }

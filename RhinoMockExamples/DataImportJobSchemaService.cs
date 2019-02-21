@@ -19,6 +19,16 @@ namespace RhinoMockExamples {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// test passing 2 parameters to mock
+        /// </summary>
+        /// <param name="meal1"></param>
+        /// <param name="meal2"></param>
+        /// <returns></returns>
+        public bool Test4(Meal meal1, Meal meal2) {
+            return meal1.Cost == meal2.Cost;
+        }
+
         public int AProperty { get; set; }
     }
 }

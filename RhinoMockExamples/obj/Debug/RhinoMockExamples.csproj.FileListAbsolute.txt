@@ -22,3 +22,5 @@ C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExam
 C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\NHibernate.xml
 C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Remotion.Linq.xml
 C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\bin\Debug\Remotion.Linq.EagerFetching.xml
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\obj\Debug\RhinoMockExamples.csproj.CopyComplete
+C:\Users\jorge\OneDrive\jorgeprg\csharp\examples\RhinoMockExamples\RhinoMockExamples\obj\Debug\RhinoMockExamples.csprojAssemblyReference.cache
